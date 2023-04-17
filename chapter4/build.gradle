@@ -1,0 +1,6 @@
+dependencies {
+    implementation "org.springframework:spring-core:$springFrameworkVersion"
+    implementation "org.springframework:spring-context:$springFrameworkVersion"
+    implementation "org.springframework:spring-test:$springFrameworkVersion"
+    implementation "javax.annotation:javax.annotation-api:1.3.2"
+}

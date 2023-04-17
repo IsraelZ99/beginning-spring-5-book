@@ -1,0 +1,12 @@
+2023-04-13 17:28:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ARTISTS" not found (this database is empty); SQL statement:
+INSERT INTO ARTISTS (NAME) VALUES (?) [42104-214]
+2023-04-13 17:28:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ARTISTS" not found (this database is empty); SQL statement:
+SELECT * FROM artists WHERE LOWER(name)=LOWER(?) [42104-214]
+2023-04-13 17:30:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ARTISTS" not found (this database is empty); SQL statement:
+INSERT INTO ARTISTS (NAME) VALUES (?) [42104-214]
+2023-04-13 17:30:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ARTISTS" not found (this database is empty); SQL statement:
+SELECT * FROM artists WHERE LOWER(name)=LOWER(?) [42104-214]

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- resource-pattern = Is a filter for the classes being scanned. Only classes included
+     in the scan are classes that end with Normalizer - thus, SimpleNormalizer and CapLeadingNormalizer classes -->
+    <context:component-scan base-package="org.book.chapter3.mem03" resource-pattern="*Normalizer.class"/>
+</beans>

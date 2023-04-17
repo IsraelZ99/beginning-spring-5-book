@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+    When Spring creates the ThirdObject, it will call init(), after all constructions has been finished,
+    just as if the following code snippet were run:
+        ThirdObject foo = new ThirdObject();
+        foo.init();
+    -->
+    <bean name="foo"
+          class="org.book.chapter4.ThirdObject"
+          init-method="init"
+          destroy-method="dispose" />
+</beans>

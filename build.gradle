@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'org.book'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
+
+ext {
+    springFrameworkVersion = '5.3.16'
+    jacksonVersion = '2.9.9'
+    testNgVersion = '7.6.1'
+}
+
+allprojects {
+    apply plugin: 'java'
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+
+    dependencies {
+        testImplementation "org.testng:testng:$testNgVersion"
+    }
+
+    test {
+        useTestNG()
+    }
+}

@@ -1,0 +1,23 @@
+plugins {
+    id 'war'
+    id 'org.gretty' version '3.1.1'
+}
+
+dependencies {
+    compileOnly "javax.servlet:javax.servlet-api:4.0.1"
+
+    implementation "org.springframework:spring-core:$springFrameworkVersion"
+    implementation "org.springframework:spring-context:$springFrameworkVersion"
+    implementation "org.springframework:spring-web:$springFrameworkVersion"
+    implementation "org.springframework:spring-webmvc:$springFrameworkVersion"
+    implementation "org.springframework:spring-test:$springFrameworkVersion"
+    implementation "org.jtwig:jtwig-web:5.87.0.RELEASE"
+    implementation "org.jtwig:jtwig-spring:5.87.0.RELEASE"
+    implementation "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+    implementation "com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion"
+    implementation "ch.qos.logback:logback-classic:1.2.3"
+    implementation project(":chapter3")
+
+    testImplementation 'org.hamcrest:hamcrest-all:1.3'
+
+}
