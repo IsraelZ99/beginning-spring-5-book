@@ -1,0 +1,17 @@
+plugins {
+    id 'org.springframework.boot' version '2.7.10'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+dependencies {
+    implementation 'com.h2database:h2'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    // Lombok is a compilation dependency
+    compileOnly 'org.projectlombok:lombok'
+    // we want the most recent release of lombok, so "1.+"
+    annotationProcessor 'org.projectlombok:lombok:1.+'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.testng:testng:7.7.0'
+}

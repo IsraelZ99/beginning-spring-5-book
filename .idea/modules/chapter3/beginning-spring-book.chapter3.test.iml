@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
-  <component name="NewModuleRootManager">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
     <content url="file://$MODULE_DIR$/../../../chapter3/src/test">
       <sourceFolder url="file://$MODULE_DIR$/../../../chapter3/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../chapter3/src/test/resources" type="java-test-resource" />
     </content>
+    <orderEntry type="jdk" jdkName="11 (2)" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.springframework:spring-context:5.3.16" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.testng:testng:7.7.0" level="project" />
+    <orderEntry type="module" module-name="chapter3.beginning-spring-book.chapter3.main" scope="TEST" />
   </component>
 </module>

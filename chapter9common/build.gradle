@@ -1,0 +1,23 @@
+// Artifact that use Spring Boot
+
+import org.springframework.boot.gradle.plugin.SpringBootPlugin
+
+//This means that dependency-management is available to the project, and we can apply
+// it without the rest of Spring Boot
+plugins {
+    id 'org.springframework.boot' version '2.7.10' apply false
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+dependencyManagement {
+    imports {
+        mavenBom SpringBootPlugin.BOM_COORDINATES
+    }
+}
+
+dependencies {
+    implementation "org.springframework.data:spring-data-commons"
+    implementation "org.springframework:spring-tx"
+    implementation "org.springframework:spring-beans"
+}
