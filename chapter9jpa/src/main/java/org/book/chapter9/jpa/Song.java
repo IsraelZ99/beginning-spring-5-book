@@ -11,7 +11,11 @@ import javax.persistence.*;
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Table(indexes = {
-
+        @Index(
+                name = "artist_song",
+                columnList = "artist_id, name",
+                unique = true
+        )
 })
 public class Song implements BaseSong<Artist, Integer> {
 
@@ -23,13 +27,14 @@ public class Song implements BaseSong<Artist, Integer> {
     @NonNull
     Artist artist;
 
+    @NonNull
     String name;
 
     int votes;
 
     @Override
     public Integer getId() {
-        return null;
+        return id;
     }
 
     @Override

@@ -3,6 +3,7 @@ package org.book.chapter9.test;
 import org.book.chapter9.common.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -75,6 +76,10 @@ public abstract class BaseSongRepositoryTests<
                 .findByArtistIdAndNameLikeIgnoreCaseOrderByNameDesc(artist.getId(),
                         wildcardConverter.convertToWildCard("m"));
         assertEquals(songs.size(), 2);
+
+        songs = songRepository
+                .findByArtistIdOrderByVotesDesc(artist.getId());
+        Assert.assertEquals(songs.size(), 2);
 
         // We know the votes assigned by default,
         // and they should be in descending order.

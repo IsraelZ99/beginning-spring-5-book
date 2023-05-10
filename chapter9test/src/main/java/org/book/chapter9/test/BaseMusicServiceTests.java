@@ -9,8 +9,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 import java.util.function.Consumer;
 
-import static org.testng.AssertJUnit.assertEquals;
-import static org.testng.AssertJUnit.assertNotNull;
+import static org.testng.Assert.*;
 
 public abstract class BaseMusicServiceTests<
         A extends BaseArtist<ID>,
@@ -84,8 +83,8 @@ public abstract class BaseMusicServiceTests<
     void testMatchingArtistNames() {
         List<String> names = musicService.getMatchingArtistNames("Th");
         assertEquals(names.size(), 2);
-        assertEquals(names.get(0), "Threadbare Loaf");
-        assertEquals(names.get(1), "Therapy Zeppelin");
+        assertEquals(names.get(0), "Therapy Zeppelin");
+        assertEquals(names.get(1), "Threadbare Loaf");
     }
 
     @Test
@@ -96,7 +95,7 @@ public abstract class BaseMusicServiceTests<
         assertNotNull(searched);
         assertEquals(artist.getName(), searched.getName());
         searched = musicService.getArtistById(getNonexistentId());
-        assertNotNull(searched);
+        assertNull(searched);
     }
 
     @Test
@@ -107,7 +106,7 @@ public abstract class BaseMusicServiceTests<
         assertNotNull(searched);
         assertEquals(song.getName(), searched.getName());
         searched = musicService.getSongById(getNonexistentId());
-        assertNotNull(searched);
+        assertNull(searched);
     }
 
     @Test

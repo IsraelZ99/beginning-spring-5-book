@@ -62,10 +62,10 @@ public abstract class BaseMusicService<
         return songRepository.findByArtistIdOrderByVotesDesc(artist.getId());
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public List<String> getMatchingArtistNames(String artistNames) {
         return artistRepository
-                .findAllByNameIsLikedIgnoreCaseOrderByName(
+                .findAllByNameIsLikeIgnoreCaseOrderByName(
                         converter.convertToWildCard(artistNames))
                 .stream()
                 .map(A::getName)

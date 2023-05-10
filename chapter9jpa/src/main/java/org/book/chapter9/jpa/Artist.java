@@ -10,8 +10,8 @@ import java.util.List;
 
 @Entity
 @Data
-@NoArgsConstructor(force = true)
-@RequiredArgsConstructor
+@NoArgsConstructor(force = true) //  All final/@NoNull fields are initialized with 0 / false / null
+@RequiredArgsConstructor // Is used when are another constructor such as @NoArgsConstructor (final and @NonNull)
 @EqualsAndHashCode(exclude = "songs")
 public class Artist implements BaseArtist<Integer> {
 

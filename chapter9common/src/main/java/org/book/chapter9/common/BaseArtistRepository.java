@@ -7,8 +7,9 @@ import java.util.Optional;
 
 public interface BaseArtistRepository<T extends BaseArtist<ID>, ID> extends CrudRepository<T, ID> {
 
-    List<T> findAllByNameIsLikedIgnoreCaseOrderByName(String name);
+    List<T> findAllByNameIsLikeIgnoreCaseOrderByName(String name);
 
     Optional<T> findByNameIgnoreCase(String name);
+
 
 }

@@ -19,5 +19,7 @@ dependencies {
     implementation "com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion"
     compileOnly "org.projectlombok:lombok:1.+"
     annotationProcessor "org.projectlombok:lombok"
+
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
     testImplementation project(":chapter9test")
 }
