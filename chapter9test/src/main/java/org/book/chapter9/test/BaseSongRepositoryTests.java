@@ -6,7 +6,10 @@ import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.List;
 import java.util.Optional;
+
+import static org.testng.AssertJUnit.assertEquals;
 
 public abstract class BaseSongRepositoryTests<
         A extends BaseArtist<ID>,
@@ -56,7 +59,7 @@ public abstract class BaseSongRepositoryTests<
             Optional<S> songQuery = songRepository.findByArtistIdAndNameIgnoreCase(
                     artist.getId(),
                     songTitle);
-            if(songQuery.isEmpty()) {
+            if (songQuery.isEmpty()) {
                 S song = createSong(artist, songTitle);
                 song.setVotes(votes);
                 songRepository.save(song);
@@ -68,6 +71,18 @@ public abstract class BaseSongRepositoryTests<
     public void testOperations() {
         A artist = artistRepository.findByNameIgnoreCase("therapy zeppelin")
                 .orElseThrow();
+        List<S> songs = songRepository
+                .findByArtistIdAndNameLikeIgnoreCaseOrderByNameDesc(artist.getId(),
+                        wildcardConverter.convertToWildCard("m"));
+        assertEquals(songs.size(), 2);
+
+        // We know the votes assigned by default,
+        // and they should be in descending order.
+        // "Medium" has four votes
+        assertEquals(songs.get(0).getName(), "Medium");
+        assertEquals(songs.get(0).getVotes(), 4);
+        // "Mdbrbl" is liked by nobody. I mean, REALLY.
+        assertEquals(songs.get(1).getVotes(), 0);
     }
 
 }
