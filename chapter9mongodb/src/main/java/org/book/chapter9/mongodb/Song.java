@@ -16,7 +16,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor(force = true)
 @RequiredArgsConstructor
 @CompoundIndexes(
-        @CompoundIndex(unique = true, def = "{'artist': 1, 'name': 1}")
+        @CompoundIndex(unique = true, def = "{'artist':1, 'name':1}")
 )
 public class Song implements BaseSong<Artist, String> {
 
@@ -32,43 +32,4 @@ public class Song implements BaseSong<Artist, String> {
 
     int votes;
 
-    @Override
-    public String getId() {
-        return id;
-    }
-
-    @Override
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    @Override
-    public Artist getArtist() {
-        return artist;
-    }
-
-    @Override
-    public void setArtist(Artist artist) {
-        this.artist = artist;
-    }
-
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public int getVotes() {
-        return votes;
-    }
-
-    @Override
-    public void setVotes(int votes) {
-        this.votes = votes;
-    }
 }
