@@ -9,6 +9,7 @@
         </processorPath>
         <module name="beginning-spring-book.chapter8.main" />
         <module name="beginning-spring-book.chapter9jpa.main" />
+        <module name="beginning-spring-book.chapter9mongodb.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11" />

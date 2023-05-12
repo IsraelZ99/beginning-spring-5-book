@@ -9,8 +9,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/chapter6/beginning-spring-book.chapter6.test.iml" filepath="$PROJECT_DIR$/.idea/modules/chapter6/beginning-spring-book.chapter6.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/chapter7/beginning-spring-book.chapter7.main.iml" filepath="$PROJECT_DIR$/.idea/modules/chapter7/beginning-spring-book.chapter7.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/chapter7/beginning-spring-book.chapter7.test.iml" filepath="$PROJECT_DIR$/.idea/modules/chapter7/beginning-spring-book.chapter7.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chapter8/beginning-spring-book.chapter8.main.iml" filepath="$PROJECT_DIR$/.idea/modules/chapter8/beginning-spring-book.chapter8.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/chapter9jpa/beginning-spring-book.chapter9jpa.main.iml" filepath="$PROJECT_DIR$/.idea/modules/chapter9jpa/beginning-spring-book.chapter9jpa.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chapter9mongodb/beginning-spring-book.chapter9mongodb.main.iml" filepath="$PROJECT_DIR$/.idea/modules/chapter9mongodb/beginning-spring-book.chapter9mongodb.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/chapter9test/beginning-spring-book.chapter9test.main.iml" filepath="$PROJECT_DIR$/.idea/modules/chapter9test/beginning-spring-book.chapter9test.main.iml" />
     </modules>
   </component>
