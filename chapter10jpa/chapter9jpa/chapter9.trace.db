@@ -1,0 +1,3 @@
+2023-05-17 18:08:33 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM ARTIST ARTIST [*]SONG"; SQL statement:
+SELECT * FROM ARTIST ARTIST SONG [42000-214]

@@ -1,0 +1,18 @@
+/*
+    The new plugins method does not work in multi-project configurations (subprojects, allprojects),
+    but will work on the build configuration for each child project.
+ */
+
+plugins {
+    id 'org.springframework.boot' version '2.7.10'
+}
+
+apply plugin: 'io.spring.dependency-management' // Will control the versions of your project’s direct
+apply plugin: 'org.springframework.boot'
+
+dependencies {
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation project(":chapter9jpa")
+    implementation project(":chapter9common")
+}
